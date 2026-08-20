@@ -63,7 +63,7 @@ RustyTodo allows users to add, complete, delete, save, and automatically load th
                    tasks.json
 ▶️ Installation
 
-git clone YOUR_REPOSITORY_URL
+git clone https://github.com/ayushkusingh69/Rust-Todo-app.git
 cd tauriapp
 npm install
 npm run tauri dev
@@ -136,3 +136,17 @@ Read tasks.json
 Return saved tasks
         ↓
 Display tasks on screen
+
+## Screenshots
+
+### TODO App
+
+![Home Page](assets/home.png)
+
+### TODO App
+
+![Task Page](assets/task.png)
+
+### TODO App
+
+![complete Page](assets/complete.png)
