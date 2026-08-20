@@ -171,17 +171,15 @@ tauriapp/
 
 ## Home Screen
 
-![Home Screen](./assets/home.png)
+![Home Screen](./src/assets/home.png)
 
 ## Tasks Added
 
-![Tasks Added](./assets/tasks.png)
+![Tasks Added](./src/assets/task.png)
 
 ## Completed Task
 
-![Completed Task](./assets/completed.png)
-
----
+![Completed Task](./src/assets/complete.png)
 
 # 👨‍💻 Author
 
