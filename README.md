@@ -1,4 +1,4 @@
-#  RustyTodo
+# 📝 RustyTodo
 
 A simple and lightweight desktop Todo application built using **React, Tauri, and Rust**.
 
@@ -6,7 +6,7 @@ RustyTodo allows users to add, complete, delete, save, and automatically load th
 
 ---
 
-#  Features
+# 🚀 Features
 
 - ➕ Add new tasks
 - ✅ Mark tasks as completed or uncompleted
@@ -20,7 +20,7 @@ RustyTodo allows users to add, complete, delete, save, and automatically load th
 
 ---
 
-#  Tech Stack
+# 🛠️ Tech Stack
 
 | Technology | Usage |
 |---|---|
@@ -32,7 +32,7 @@ RustyTodo allows users to add, complete, delete, save, and automatically load th
 
 ---
 
-# Project Architecture
+# 🏗️ Project Architecture
 
 ```text
                     RUSTYTODO
@@ -61,15 +61,87 @@ RustyTodo allows users to add, complete, delete, save, and automatically load th
                         │
                         ▼
                    tasks.json
-▶️ Installation
+```
 
+---
+
+# ⚙️ How It Works
+
+## Add Task
+
+```text
+User enters task
+        ↓
+React addTask()
+        ↓
+Update tasks state
+        ↓
+saveTasks()
+        ↓
+invoke("save_tasks")
+        ↓
+Tauri
+        ↓
+Rust save_tasks()
+        ↓
+Save data in tasks.json
+```
+
+## Load Tasks
+
+```text
+Application starts
+        ↓
+React useEffect()
+        ↓
+loadSavedTasks()
+        ↓
+invoke("load_tasks")
+        ↓
+Tauri
+        ↓
+Rust load_tasks()
+        ↓
+Read tasks.json
+        ↓
+Return saved tasks
+        ↓
+Display tasks on screen
+```
+
+---
+
+# ▶️ Installation
+
+## 1. Clone the Repository
+
+```bash
 git clone https://github.com/ayushkusingh69/Rust-Todo-app.git
+```
+
+## 2. Go to the Project Folder
+
+```bash
 cd tauriapp
+```
+
+## 3. Install Dependencies
+
+```bash
 npm install
+```
+
+## 4. Run the Application
+
+```bash
 npm run tauri dev
+```
 
+---
 
-# Folder Structure
+# 📂 Folder Structure
+
+```text
 tauriapp/
 │
 ├── src/
@@ -91,62 +163,26 @@ tauriapp/
 ├── package.json
 ├── package-lock.json
 └── README.md
+```
 
+---
+
+# 📸 Screenshots
+
+## Home Screen
+
+![Home Screen](./assets/home.png)
+
+## Tasks Added
+
+![Tasks Added](./assets/tasks.png)
+
+## Completed Task
+
+![Completed Task](./assets/completed.png)
+
+---
 
 # 👨‍💻 Author
 
 **Ayush Kumar Singh**
- 
- ⚙️ How It Works
-
- Add Task
-
- User enters task
-        ↓
-React addTask()
-        ↓
-Update tasks state
-        ↓
-saveTasks()
-        ↓
-invoke("save_tasks")
-        ↓
-Tauri
-        ↓
-Rust save_tasks()
-        ↓
-Save data in tasks.json
-
-Load Tasks
-
-Application starts
-        ↓
-React useEffect()
-        ↓
-loadSavedTasks()
-        ↓
-invoke("load_tasks")
-        ↓
-Tauri
-        ↓
-Rust load_tasks()
-        ↓
-Read tasks.json
-        ↓
-Return saved tasks
-        ↓
-Display tasks on screen
-
-## Screenshots
-
-### TODO App
-
-![Home Page](assets/home.png)
-
-### TODO App
-
-![Task Page](assets/task.png)
-
-### TODO App
-
-![complete Page](assets/complete.png)
